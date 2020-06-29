@@ -1,0 +1,2 @@
+//9c write louvain with embedding similarity
+CALL gds.louvain.write({nodeProjection:'Patient', relationshipProjection:'EMBEDDING_SIMILARITY', relationshipProperties:'score', writeProperty:'embedding_louvain_community'})

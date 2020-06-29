@@ -1,0 +1,2 @@
+//9b run louvain on embedding similarity
+CALL gds.louvain.stream({nodeProjection:'Patient', relationshipProjection:'EMBEDDING_SIMILARITY', relationshipProperties:'score'}) YIELD nodeId, communityId RETURN communityId, count(nodeId) as size ORDER by size DESC
